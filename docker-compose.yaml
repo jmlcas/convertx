@@ -1,0 +1,16 @@
+services:
+
+  convertx: 
+    image: ghcr.io/c4illin/convertx
+    container_name: convertx
+    restart: unless-stopped
+    ports:
+      - "8200:3000"
+    environment: 
+      - ACCOUNT_REGISTRATION=false
+      - JWT_SECRET=votre-longue-phrase-secrete
+      - HTTP_ALLOWED=false
+      - ALLOW_UNAUTHENTICATED=false
+      - AUTO_DELETE_EVERY_N_HOURS=24
+    volumes:
+      -./convertx:/app/data
