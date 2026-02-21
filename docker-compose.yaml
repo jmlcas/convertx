@@ -12,5 +12,6 @@ services:
       - HTTP_ALLOWED=false
       - ALLOW_UNAUTHENTICATED=false
       - AUTO_DELETE_EVERY_N_HOURS=24
+      - TZ=Europe/Madrid
     volumes:
       -./convertx:/app/data
