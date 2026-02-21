@@ -14,4 +14,5 @@ services:
       - AUTO_DELETE_EVERY_N_HOURS=24
       - TZ=Europe/Madrid
     volumes:
-      -./convertx:/app/data
+      - ./convertx:/app/data
+
