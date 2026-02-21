@@ -7,12 +7,11 @@ services:
     ports:
       - "8200:3000"
     environment: 
-      - ACCOUNT_REGISTRATION=false
+      - ACCOUNT_REGISTRATION=true   # false
       - JWT_SECRET=dCYlN0UjXA0sO4lQaz0JxMd11U1c0lausHwKrW1Jat8=    #generate-with: openssl rand -base64 32
-      - HTTP_ALLOWED=false
+      - HTTP_ALLOWED=true
       - ALLOW_UNAUTHENTICATED=false
       - AUTO_DELETE_EVERY_N_HOURS=24
       - TZ=Europe/Madrid
     volumes:
       - ./convertx:/app/data
-
